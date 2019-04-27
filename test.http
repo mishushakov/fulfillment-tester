@@ -1,0 +1,11 @@
+POST http://localhost:8899
+Content-Type: application/json
+
+{
+    "queryInput": {
+        "text": {
+            "text": "Webhook Demo",
+            "languageCode": "en"
+        }
+    }
+}
