@@ -18,16 +18,10 @@ Or send the requests manually:
 
 - Works on Windows, Linux and Mac (64 bit)
 - Small binary with no external dependencies, written in Go (<10 MB)
-- Supports fulfillments in any programming language
-- Supports Actions on Google fulfillments
+- Test fulfillments in any programming language and Actions on Google fulfillments
 - No More waiting. Never. Just run your fulfillment (locally or remotely) and start testing
-- Be 100x more productive, when working with multiple Agents
 - Run automated tests with tools like Jest, Ava, Mocha (or any other of your choice)
-- Test with convinience, with a built-in User Interface
-- Test your fulfillments on CI/CD
-- Debug your fulfillments: run tests, fix errors, repeat
-- Isolate your testing (great, when working in a group). Don't share access to your Google Project
-- Can be packaged as Docker image and run on Docker or Kubernetes
+- Test with convinience, with a built-in User Interface or on CI/CD
 - Works exactly like Dialogflow, 100% accurate testing results guaranteed
 
 Excited? Let's get started!
@@ -62,7 +56,7 @@ Notice: when running Dialogflow Fulfillment Tester on a diffrent host/port, make
 let url = "http://localhost:8899" // <- Change the url, when running on a different host/port
 ```
 
-Notice: the UI doesn't actually display Actions on Google components. I don't have time to do that, you can [donate](https://paypal.me/mishushakov) to make me reconsider it or implement it yourself and make a pull request to this repo
+Notice: the UI doesn't display Actions on Google components at the moment. 
 
 Tip: When inspecting using the UI, open the console to see the request/response body
 
