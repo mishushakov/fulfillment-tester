@@ -1,3 +1,8 @@
+### Get Agent
+GET http://localhost:8899
+Content-Type: application/json
+
+### Detect Intent
 POST http://localhost:8899
 Content-Type: application/json
 
