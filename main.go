@@ -35,18 +35,19 @@ func proxy(res http.ResponseWriter, req *http.Request) {
 		res.Write(body)
 	} else if req.Method == "POST" {
 		// Proxy request to Dialogflow Gateway (Session ID is always fulfillment-tester)
-		resp, gateway_conn_err := http.Post(Gateway+"/fulfillment-tester", "application/json", req.Body)
+		resp, gateway_conn_err := http.Post(Gateway, "application/json", req.Body)
 		if gateway_conn_err != nil {
 			panic(gateway_conn_err)
-		}
-		if resp.StatusCode != 200 {
-			res.WriteHeader(resp.StatusCode)
 		}
 
 		// Read the response from Dialogflow Gateway
 		resp_body, gateway_res_err := ioutil.ReadAll(resp.Body)
 		if gateway_res_err != nil {
 			panic(gateway_res_err)
+		}
+
+		if resp.StatusCode != 200 {
+			res.Write(resp_body)
 		}
 
 		var result map[string]interface{}
